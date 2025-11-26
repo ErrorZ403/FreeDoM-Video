@@ -1002,7 +1002,7 @@ class CogVideoXImageToVideoPipeline(DiffusionPipeline, CogVideoXLoraLoaderMixin)
                                 latent_frame = (fixed_frame - 1) // 4 + 1
 
                             latent_pair = pred_original_sample[:, latent_frame-2:latent_frame+1]
-                            
+                            decoded_frames = self.decode_latents(latent_pair)
                             del latent_pair
 
                             relative_frame_idx = (fixed_frame - 1) % 4 + 5
