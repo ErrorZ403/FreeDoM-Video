@@ -1,0 +1,14 @@
+.ipynb_notebooks/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.vscode/
+.idea/
+logs/
+*.log
+data/
+output/
+temp/
+*.sqlite
+*.db
