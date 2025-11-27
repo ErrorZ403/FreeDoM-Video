@@ -17,7 +17,7 @@ def load_pipe(task, device):
 
     elif task == "text2video":
         pipe = CogVideoXPipeline.from_pretrained(
-            "zai-org/CogVideoX-5b",
+            "zai-org/CogVideoX-2b",
             torch_dtype=torch.bfloat16
         )
     elif task == "interpolation":
@@ -63,6 +63,7 @@ def main():
     parser.add_argument("--device", type=str, default="cuda")
     args = parser.parse_args()
     pipe = load_pipe(args.task, args.device)
+    os.makedirs(args.output, exist_ok=True)
 
     folder = args.folder
     seed = args.seed
