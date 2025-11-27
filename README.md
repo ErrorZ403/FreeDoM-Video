@@ -15,8 +15,7 @@ FreeDoM-Video is a course project for controllable video generation using CogVid
 
 - **Flexible Conditioning**:
   - **Depth**: Use depth maps for structural guidance (via Depth-Anything-V2)
-  - **Sketch/Scribble**: Guide generation with edge/sketch representations
-  - **Grayscale**: Control with grayscale intensity patterns
+  - **Sketch**: Guide generation with edge/sketch representations
   - **Segmentation**: Semantic segmentation-based guidance (via SegFormer)
 
 ## Installation
