@@ -62,7 +62,6 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", type=str, default="cuda")
     args = parser.parse_args()
-
     pipe = load_pipe(args.task, args.device)
 
     folder = args.folder
@@ -153,3 +152,6 @@ def main():
         
     save_dir = f"{args.output}/demo_rhino_{args.loss}_{args.task}.gif"
     export_to_gif(video, save_dir, fps=8)
+
+if __name__ == "__main__":
+    main()
